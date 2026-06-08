@@ -1,0 +1,64 @@
+/*
+  TATCO — هوية بصرية مخصّصة
+  فلسفة التصميم: "Industrial Editorial" — صرامة لوجستية صناعية ممزوجة بطباعة تحريرية واثقة.
+  لوحة الألوان مشتقة من شعار الشركة: رمادي غرافيتي عميق + برتقالي حارق + أخضر زيتوني داكن.
+  بحد أقصى لونان أساسيان + لون تمييز واحد — لا تدرّجات بنفسجية، لا أزرق افتراضي.
+*/
+
+:root{
+  /* ===== الألوان — Brand Palette ===== */
+  --ink:        #15181a;   /* خلفية أساسية: غرافيتي شبه أسود */
+  --ink-2:      #1d2225;   /* سطح بطاقات/أقسام */
+  --ink-3:      #262c2f;   /* حدود وفواصل خفيفة */
+  --paper:      #f3efe7;   /* نص/خلفية فاتحة دافئة (ليست أبيض نقي) */
+  --paper-dim:  #c9c2b6;   /* نص ثانوي على الغامق */
+  --ash:        #8a9097;   /* نص هادئ / تفاصيل */
+
+  --orange:     #df6a2e;   /* برتقالي TATCO — لون التمييز الرئيسي (CTA, روابط, تشديد) */
+  --orange-deep:#b6501f;   /* برتقالي أغمق للتدرجات/الحالات النشطة */
+  --olive:      #5c6b4f;   /* أخضر زيتوني من الشعار — لون ثانوي هادئ */
+  --olive-dim:  #3c4738;   /* أخضر زيتوني داكن للخلفيات/الأشرطة */
+
+  /* ===== الطباعة ===== */
+  --font-display-en: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body-en:    'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-arabic:     'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+
+  /* ===== تباعد ===== */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1.25rem;
+  --space-md:  2rem;
+  --space-lg:  3.5rem;
+  --space-xl:  6rem;
+  --space-2xl: 10rem;
+
+  /* ===== حدود وظلال ===== */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 18px;
+  --shadow-soft: 0 1px 2px rgba(0,0,0,.25), 0 12px 32px -12px rgba(0,0,0,.45);
+  --shadow-deep: 0 24px 64px -20px rgba(0,0,0,.55);
+
+  /* ===== الحركة — Emil Kowalski rules: 150–300ms, custom cubic-bezier ===== */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+
+  --container: 1240px;
+  --hairline: 1px solid var(--ink-3);
+}
+
+/* الوضع الإنجليزي يستخدم خطوطًا لاتينية مختلفة عن العربي */
+:root[lang="en"]{
+  --font-display: var(--font-display-en);
+  --font-body: var(--font-body-en);
+}
+:root[lang="ar"]{
+  --font-display: var(--font-arabic);
+  --font-body: var(--font-arabic);
+}
