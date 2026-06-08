@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" data-title-ar="معرض الأعمال | TATCO — لقطات من عملياتنا الميدانية" data-title-en="Gallery | TATCO — Glimpses from Our Field Operations">
+<html lang="ar" dir="rtl" data-theme="dark" data-title-ar="معرض الأعمال | TATCO — لقطات من عملياتنا الميدانية" data-title-en="Gallery | TATCO — Glimpses from Our Field Operations">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15181a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
 <meta name="description" content="معرض أعمال تاتكو — لقطات من أسطول النقل، المستودعات، وعمليات التخليص الجمركي والتوزيع داخل المملكة العربية السعودية.">
+<link rel="canonical" href="https://voltstore.github.io/tatco-site/gallery.html">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 <title>معرض الأعمال | TATCO — لقطات من عملياتنا الميدانية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/theme.css">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/components.css">
+<script>(function(){try{var t=localStorage.getItem('tatco-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 </head>
 <body>
+
+<a class="skip-link" href="#main-content"><span class="lang-ar">تخطي إلى المحتوى</span><span class="lang-en">Skip to main</span></a>
 
 <svg style="position:absolute;width:0;height:0;overflow:hidden"><use href="assets/svg/icons.svg#i-logo"/></svg>
 <object type="image/svg+xml" data="assets/svg/icons.svg" style="display:none" aria-hidden="true"></object>
@@ -20,23 +27,39 @@
 <header class="nav">
   <a href="index.html" class="brand">
     <img class="mark" src="assets/img/logo.png" alt="TATCO">
-    <span>TATCO
-      <small class="lang-ar">شركة الطبيعة العربية المحدودة</small>
-      <small class="lang-en">Arabian Nature Co. Ltd.</small>
-    </span>
+    <span>TATCO<small class="lang-ar">شركة الطبيعة العربية المحدودة</small><small class="lang-en">Arabian Nature Co. Ltd.</small></span>
   </a>
-  <nav class="nav-links">
+  <nav class="nav-links" id="nav-links" aria-label="Main">
     <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
     <a href="about.html"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a>
     <a href="services.html"><span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span></a>
-    <a href="gallery.html" class="is-active"><span class="lang-ar">معرض الأعمال</span><span class="lang-en">Gallery</span></a>
+    <div class="nav-dropdown">
+      <a href="gallery.html" class="is-active" aria-current="page"><span class="lang-ar">المزيد</span><span class="lang-en">More</span> <svg width="12" height="12" style="opacity:.6"><use href="assets/svg/icons.svg#i-chevron-down"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="tracking.html"><svg><use href="assets/svg/icons.svg#i-package"/></svg><span class="lang-ar">تتبع</span><span class="lang-en">Track</span></a>
+        <a href="case-studies.html"><svg><use href="assets/svg/icons.svg#i-trophy"/></svg><span class="lang-ar">قصص النجاح</span><span class="lang-en">Case Studies</span></a>
+        <a href="sustainability.html"><svg><use href="assets/svg/icons.svg#i-leaf"/></svg><span class="lang-ar">الاستدامة</span><span class="lang-en">Sustainability</span></a>
+        <a href="careers.html"><svg><use href="assets/svg/icons.svg#i-briefcase"/></svg><span class="lang-ar">الوظائف</span><span class="lang-en">Careers</span></a>
+        <a href="faq.html"><svg><use href="assets/svg/icons.svg#i-document"/></svg><span class="lang-ar">FAQ</span><span class="lang-en">FAQ</span></a>
+        <a href="gallery.html"><svg><use href="assets/svg/icons.svg#i-eye"/></svg><span class="lang-ar">المعرض</span><span class="lang-en">Gallery</span></a>
+      </div>
+    </div>
     <a href="contact.html"><span class="lang-ar">تواصل معنا</span><span class="lang-en">Contact</span></a>
   </nav>
   <div class="nav-tools">
-    <div class="lang-switch"><button data-lang="ar" type="button">AR</button><button data-lang="en" type="button">EN</button></div>
-    <button class="nav-burger" aria-label="فتح القائمة" type="button"><span></span><span></span><span></span></button>
+    <button class="theme-toggle" type="button" aria-label="تبديل الوضع">
+      <svg class="icon-sun"><use href="assets/svg/icons.svg#i-sun"/></svg>
+      <svg class="icon-moon"><use href="assets/svg/icons.svg#i-moon"/></svg>
+    </button>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="ar" type="button">AR</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+    <button class="nav-burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links" type="button"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<main id="main-content">
 
 <!-- ============ هيدر الصفحة ============ -->
 <section class="hero" style="padding-block: clamp(7rem, 14vw, 9.5rem) 2.5rem">
@@ -175,12 +198,14 @@
   </div>
 </footer>
 
+</main>
+
 <a class="whatsapp-fab" href="https://wa.me/966592898888" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
   <span class="ping" aria-hidden="true"></span>
-  <svg viewBox="0 0 32 32" fill="#f3efe7"><use href="assets/svg/icons.svg#i-whatsapp"/></svg>
+  <svg viewBox="0 0 32 32"><use href="assets/svg/icons.svg#i-whatsapp"/></svg>
 </a>
+<button class="to-top" type="button" aria-label="Back to top"><svg><use href="assets/svg/icons.svg#i-arrow"/></svg></button>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

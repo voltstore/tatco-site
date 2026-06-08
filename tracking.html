@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark"
+  data-title-ar="تتبّع شحنتك | TATCO"
+  data-title-en="Track Your Shipment | TATCO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15181a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+<meta name="description" content="تتبّع شحنتك مع تاتكو لحظة بلحظة — من نقطة الانطلاق حتى التسليم. واجهة تتبع تجريبية تعرض المسار، الجدولة، ومرحلة التسليم.">
+<link rel="canonical" href="https://voltstore.github.io/tatco-site/tracking.html">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+
+<title>تتبّع شحنتك | TATCO</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/theme.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+
+<script>(function(){try{var t=localStorage.getItem('tatco-theme')||'dark';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">
+  <span class="lang-ar">انتقل إلى المحتوى الرئيسي</span>
+  <span class="lang-en">Skip to main content</span>
+</a>
+
+<object type="image/svg+xml" data="assets/svg/icons.svg" style="display:none" aria-hidden="true"></object>
+
+<header class="nav">
+  <a href="index.html" class="brand">
+    <img class="mark" src="assets/img/logo.png" alt="TATCO">
+    <span>TATCO<small class="lang-ar">شركة الطبيعة العربية المحدودة</small><small class="lang-en">Arabian Nature Co. Ltd.</small></span>
+  </a>
+  <nav class="nav-links" id="nav-links" aria-label="Main">
+    <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+    <a href="about.html"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a>
+    <a href="services.html"><span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span></a>
+    <div class="nav-dropdown">
+      <a href="tracking.html" class="is-active" aria-current="page"><span class="lang-ar">المزيد</span><span class="lang-en">More</span> <svg width="12" height="12" style="opacity:.6"><use href="assets/svg/icons.svg#i-chevron-down"/></svg></a>
+      <div class="nav-dropdown-menu">
+        <a href="tracking.html"><svg><use href="assets/svg/icons.svg#i-package"/></svg><span class="lang-ar">تتبع شحنتك</span><span class="lang-en">Track Shipment</span></a>
+        <a href="case-studies.html"><svg><use href="assets/svg/icons.svg#i-trophy"/></svg><span class="lang-ar">قصص النجاح</span><span class="lang-en">Case Studies</span></a>
+        <a href="sustainability.html"><svg><use href="assets/svg/icons.svg#i-leaf"/></svg><span class="lang-ar">الاستدامة</span><span class="lang-en">Sustainability</span></a>
+        <a href="careers.html"><svg><use href="assets/svg/icons.svg#i-briefcase"/></svg><span class="lang-ar">الوظائف</span><span class="lang-en">Careers</span></a>
+        <a href="faq.html"><svg><use href="assets/svg/icons.svg#i-document"/></svg><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span></a>
+        <a href="gallery.html"><svg><use href="assets/svg/icons.svg#i-eye"/></svg><span class="lang-ar">معرض الأعمال</span><span class="lang-en">Gallery</span></a>
+      </div>
+    </div>
+    <a href="contact.html"><span class="lang-ar">تواصل معنا</span><span class="lang-en">Contact</span></a>
+  </nav>
+  <div class="nav-tools">
+    <button class="theme-toggle" type="button" aria-label="تبديل الوضع">
+      <svg class="icon-sun"><use href="assets/svg/icons.svg#i-sun"/></svg>
+      <svg class="icon-moon"><use href="assets/svg/icons.svg#i-moon"/></svg>
+    </button>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-lang="ar" type="button">AR</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+    <button class="nav-burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ============ هيرو الصفحة ============ -->
+<section class="hero hero--inner">
+  <div class="hero-orbs" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow reveal"><span class="lang-ar">تتبّع الشحنة</span><span class="lang-en">Shipment Tracking</span></p>
+      <h1 class="reveal">
+        <span class="lang-ar">شحنتك على<br>رادارنا — <span class="accent">دائمًا</span>.</span>
+        <span class="lang-en">Your cargo is on<br>our radar — <span class="accent">always</span>.</span>
+      </h1>
+      <p class="lede reveal">
+        <span class="lang-ar">أدخل رقم الشحنة لمعرفة موقعها، مرحلتها، والوقت المتوقع للتسليم. تحديثات حية من فريق العمليات مباشرة.</span>
+        <span class="lang-en">Enter your shipment number to see its location, current stage, and ETA. Live updates direct from our operations team.</span>
+      </p>
+    </div>
+    <div class="hero-meta reveal">
+      <div>
+        <span class="eyebrow" style="margin-bottom:.5rem"><span class="lang-ar">دعم مباشر</span><span class="lang-en">Live Support</span></span>
+        <a href="tel:+966592898888" style="color:var(--paper); font-weight:700; font-size:1.05rem" dir="ltr">+966 59 289 8888</a>
+      </div>
+      <div>
+        <span class="eyebrow" style="margin-bottom:.5rem"><span class="lang-ar">واتساب</span><span class="lang-en">WhatsApp</span></span>
+        <a href="https://wa.me/966592898888" target="_blank" rel="noopener" style="color:var(--paper); font-weight:600">+966 59 289 8888</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ نموذج التتبع ============ -->
+<section class="track-section">
+  <div class="wrap" style="max-width: 920px">
+    <form class="track-form reveal" id="track-form" autocomplete="off">
+      <input type="text" id="track-input" inputmode="latin"
+        placeholder="TAT-2026-XXXXX"
+        aria-label="رقم الشحنة">
+      <button type="submit" class="btn btn--solid btn--lg">
+        <svg width="16" height="16"><use href="assets/svg/icons.svg#i-search"/></svg>
+        <span class="lang-ar">تتبّع الشحنة</span><span class="lang-en">Track Shipment</span>
+      </button>
+    </form>
+    <div class="track-helper reveal">
+      <button id="track-demo" class="btn--text" type="button">
+        <svg width="14" height="14"><use href="assets/svg/icons.svg#i-zap"/></svg>
+        <span class="lang-ar">جرّب رقمًا تجريبيًا</span><span class="lang-en">Try demo number</span>
+      </button>
+      <a href="https://wa.me/966592898888" target="_blank" rel="noopener">
+        <svg width="14" height="14" style="display:inline; vertical-align:-2px"><use href="assets/svg/icons.svg#i-whatsapp"/></svg>
+        <span class="lang-ar">احصل على دعم فوري</span><span class="lang-en">Get instant support</span>
+      </a>
+    </div>
+    <div id="track-result"></div>
+  </div>
+</section>
+
+<!-- ============ كيف يعمل التتبع ============ -->
+<section class="section section--alt">
+  <div class="wrap">
+    <p class="eyebrow reveal"><span class="lang-ar">كيف يعمل</span><span class="lang-en">How it works</span></p>
+    <h2 class="reveal" style="margin-block:1rem 2.4rem; max-width:26ch">
+      <span class="lang-ar">شفافية كاملة من لحظة الاستلام حتى التسليم</span>
+      <span class="lang-en">Full transparency from pickup to delivery</span>
+    </h2>
+
+    <div class="grid-3 reveal-stagger">
+      <div class="feature-card reveal" style="--i:0">
+        <div class="feature-icon"><svg><use href="assets/svg/icons.svg#i-package"/></svg></div>
+        <h3><span class="lang-ar">رقم تتبع فريد</span><span class="lang-en">Unique Tracking ID</span></h3>
+        <p><span class="lang-ar">تستلم رقمًا فريدًا فور بدء الشحنة، يمكن استخدامه طوال الرحلة عبر هذه الصفحة أو من خلال فريق العمليات مباشرة.</span><span class="lang-en">You receive a unique number when the shipment starts — usable throughout the journey via this page or directly from our operations team.</span></p>
+      </div>
+      <div class="feature-card reveal" style="--i:1">
+        <div class="feature-icon"><svg><use href="assets/svg/icons.svg#i-route"/></svg></div>
+        <h3><span class="lang-ar">مراحل واضحة</span><span class="lang-en">Clear Milestones</span></h3>
+        <p><span class="lang-ar">من الاستلام، إلى التخليص، إلى المرور بنقاط الطريق، إلى الوصول — كل مرحلة مسجّلة بزمنها ومكانها.</span><span class="lang-en">From pickup, to customs, to checkpoints, to arrival — every stage logged with time and location.</span></p>
+      </div>
+      <div class="feature-card reveal" style="--i:2">
+        <div class="feature-icon"><svg><use href="assets/svg/icons.svg#i-phone"/></svg></div>
+        <h3><span class="lang-ar">تنبيهات فورية</span><span class="lang-en">Instant Alerts</span></h3>
+        <p><span class="lang-ar">تنبيهات SMS/واتساب عند كل مرحلة جوهرية، إضافة إلى موظف عمليات مخصص يمكن الاتصال به مباشرة.</span><span class="lang-en">SMS/WhatsApp alerts at every key milestone, plus a dedicated ops representative reachable directly.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ سريعة حول التتبع ============ -->
+<section class="section">
+  <div class="wrap" style="max-width: 800px">
+    <p class="eyebrow reveal"><span class="lang-ar">أسئلة سريعة</span><span class="lang-en">Quick Questions</span></p>
+    <h2 class="reveal" style="margin-block:1rem 2.4rem">
+      <span class="lang-ar">كل ما تحتاج معرفته عن التتبع</span>
+      <span class="lang-en">Everything about tracking</span>
+    </h2>
+
+    <div class="faq-item" data-faq>
+      <button class="faq-q" type="button">
+        <span><span class="lang-ar">من أين أحصل على رقم التتبع؟</span><span class="lang-en">Where do I get my tracking number?</span></span>
+        <span class="faq-toggle"><svg><use href="assets/svg/icons.svg#i-plus"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="lang-ar">يتم إرسال رقم التتبع تلقائيًا عند تأكيد الشحنة عبر الواتساب أو البريد الإلكتروني — صيغته دائمًا تبدأ بـ TAT متبوعًا بالسنة ورقم تسلسلي.</span>
+        <span class="lang-en">The tracking number is sent automatically when your shipment is confirmed via WhatsApp or email — it always starts with TAT followed by the year and a sequence number.</span>
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-faq>
+      <button class="faq-q" type="button">
+        <span><span class="lang-ar">كم مرة تتحدّث المعلومات؟</span><span class="lang-en">How often is the data updated?</span></span>
+        <span class="faq-toggle"><svg><use href="assets/svg/icons.svg#i-plus"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="lang-ar">المعلومات تُحدّث عند كل مرحلة جوهرية (استلام، تخليص، انطلاق، نقطة مرور، وصول). للحصول على موقع لحظي للشاحنة، تواصل مع فريق العمليات مباشرة.</span>
+        <span class="lang-en">Data updates at every key milestone (pickup, customs, departure, checkpoint, arrival). For live truck position, contact our ops team directly.</span>
+      </div></div>
+    </div>
+
+    <div class="faq-item" data-faq>
+      <button class="faq-q" type="button">
+        <span><span class="lang-ar">ماذا لو لم يظهر رقم التتبع؟</span><span class="lang-en">What if my tracking number doesn't appear?</span></span>
+        <span class="faq-toggle"><svg><use href="assets/svg/icons.svg#i-plus"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner">
+        <span class="lang-ar">إذا تأخر ظهور البيانات، يعني ذلك أن الشحنة في حالة "قيد الإعداد". تواصل معنا عبر الواتساب لتأكيد فوري.</span>
+        <span class="lang-en">If data doesn't appear, the shipment is likely in "preparing" status. Reach us on WhatsApp for instant confirmation.</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="wrap">
+    <div class="cta-box reveal" style="text-align:center">
+      <h2 style="font-size:clamp(1.6rem, 4vw, 2.6rem); max-width:24ch; margin-inline:auto">
+        <span class="lang-ar">لم تجد ما تبحث عنه؟</span>
+        <span class="lang-en">Can't find what you need?</span>
+      </h2>
+      <p style="margin:1rem auto 2rem; max-width:50ch">
+        <span class="lang-ar">فريق العمليات متاح للرد على استفساراتك مباشرة، 24 ساعة.</span>
+        <span class="lang-en">Our operations team is available 24 hours a day.</span>
+      </p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center">
+        <a href="https://wa.me/966592898888" target="_blank" rel="noopener" class="btn btn--solid btn--lg">
+          <svg width="16" height="16"><use href="assets/svg/icons.svg#i-whatsapp"/></svg>
+          <span class="lang-ar">واتساب فوري</span><span class="lang-en">Instant WhatsApp</span>
+        </a>
+        <a href="tel:+966592898888" class="btn btn--ghost btn--lg">
+          <svg width="16" height="16"><use href="assets/svg/icons.svg#i-phone"/></svg>
+          <span class="lang-ar">اتصل بنا</span><span class="lang-en">Call us</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:1rem; display:inline-flex">
+          <img class="mark" src="assets/img/logo.png" alt="TATCO"><span>TATCO</span>
+        </a>
+        <p style="max-width:36ch">
+          <span class="lang-ar">شركة الطبيعة العربية المحدودة — منظومة متكاملة للنقل والخدمات اللوجستية.</span>
+          <span class="lang-en">Arabian Nature Co. Ltd. — integrated transport and logistics across Saudi Arabia.</span>
+        </p>
+      </div>
+      <div>
+        <h4><span class="lang-ar">روابط سريعة</span><span class="lang-en">Quick Links</span></h4>
+        <ul>
+          <li><a href="about.html"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a></li>
+          <li><a href="services.html"><span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span></a></li>
+          <li><a href="case-studies.html"><span class="lang-ar">قصص النجاح</span><span class="lang-en">Case Studies</span></a></li>
+          <li><a href="gallery.html"><span class="lang-ar">المعرض</span><span class="lang-en">Gallery</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="lang-ar">الشركة</span><span class="lang-en">Company</span></h4>
+        <ul>
+          <li><a href="tracking.html"><span class="lang-ar">تتبع شحنتك</span><span class="lang-en">Track</span></a></li>
+          <li><a href="faq.html"><span class="lang-ar">الأسئلة الشائعة</span><span class="lang-en">FAQ</span></a></li>
+          <li><a href="careers.html"><span class="lang-ar">الوظائف</span><span class="lang-en">Careers</span></a></li>
+          <li><a href="sustainability.html"><span class="lang-ar">الاستدامة</span><span class="lang-en">Sustainability</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></h4>
+        <ul>
+          <li dir="ltr"><a href="tel:+966592898888"><svg><use href="assets/svg/icons.svg#i-phone"/></svg>+966 59 289 8888</a></li>
+          <li><a href="mailto:mohammed@tatco1.com"><svg><use href="assets/svg/icons.svg#i-mail"/></svg>mohammed@tatco1.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> TATCO — <span class="lang-ar">جميع الحقوق محفوظة.</span><span class="lang-en">All rights reserved.</span></span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/966592898888" target="_blank" rel="noopener" aria-label="واتساب">
+  <span class="ping" aria-hidden="true"></span>
+  <svg viewBox="0 0 32 32"><use href="assets/svg/icons.svg#i-whatsapp"/></svg>
+</a>
+<button class="to-top" type="button" aria-label="Back to top"><svg><use href="assets/svg/icons.svg#i-arrow"/></svg></button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

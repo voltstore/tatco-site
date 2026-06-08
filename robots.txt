@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voltstore.github.io/tatco-site/sitemap.xml
