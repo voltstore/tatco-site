@@ -6,8 +6,14 @@
 .hero{
   position:relative;
   padding-block: clamp(7.5rem, 16vw, 11rem) clamp(4rem, 8vw, 6rem);
+  min-height:min(100dvh, 820px);
+  display:flex; flex-direction:column; justify-content:center;
   overflow:hidden;
   border-bottom:var(--hairline);
+  background:
+    radial-gradient(ellipse 110% 70% at 95% 5%, rgba(223,106,46,.09), transparent 52%),
+    radial-gradient(ellipse 70% 60% at 5% 90%, rgba(92,107,79,.10), transparent 50%),
+    var(--ink);
 }
 .hero-net{
   position:absolute; inset-inline-end:-8%; top:-6%;
@@ -49,6 +55,12 @@
 .stats-bar{
   display:grid; grid-template-columns:repeat(4,1fr);
   border-block:var(--hairline);
+  position:relative;
+}
+.stats-bar::before{
+  content:""; position:absolute; inset-inline:0; top:0; height:2px;
+  background:linear-gradient(90deg, var(--orange), var(--olive), transparent);
+  opacity:.6;
 }
 .stats-bar .stat{
   padding: var(--space-md) clamp(1rem, 3vw, 2rem);
@@ -107,7 +119,8 @@
   align-items:start;
   padding-block: clamp(1.8rem, 4vw, 2.6rem);
   border-top:var(--hairline);
-  transition: background var(--dur-base) var(--ease-out);
+  cursor:pointer;
+  transition: background var(--dur-base) var(--ease-out), padding-inline var(--dur-base) var(--ease-out);
 }
 .service-row:last-child{ border-bottom:var(--hairline); }
 .service-row:hover{ background:rgba(223,106,46,.035); }
@@ -202,14 +215,15 @@
 .partner-chip{
   display:flex; align-items:center; justify-content:center;
   height: clamp(38px, 5vw, 52px);
+  cursor:pointer;
 }
 .partner-chip img{
   display:block; height:100%; width:auto; max-width: clamp(110px, 14vw, 160px);
   object-fit:contain;
-  filter: grayscale(1) brightness(1.65) opacity(.5);
+  filter: grayscale(1) brightness(1.65) opacity(.45);
   transition: filter var(--dur-slow) var(--ease-out), transform var(--dur-base) var(--ease-spring);
 }
-.partner-chip:hover img{
+.partner-chip:hover img, .partner-chip:focus-within img{
   filter: grayscale(0) brightness(1) opacity(1);
   transform: scale(1.08);
 }
@@ -248,6 +262,7 @@
   position:relative; background:var(--ink-2);
   padding: clamp(1.7rem, 3vw, 2.3rem);
   display:flex; flex-direction:column; gap:1.1rem;
+  cursor:pointer;
   transition: background var(--dur-base) var(--ease-out);
 }
 .feature-card::before{
@@ -291,4 +306,10 @@
   .service-row{ grid-template-columns: 1fr; gap:1rem; }
   .service-index{ display:none; }
   .contact-grid{ grid-template-columns:1fr; }
+}
+
+@media (max-width: 480px){
+  .stats-bar .stat .num{ font-size:clamp(2rem,8vw,2.6rem); }
+  .hero-actions{ flex-direction:column; }
+  .hero-actions .btn{ width:100%; justify-content:center; }
 }

@@ -14,6 +14,11 @@
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">
+  <span class="lang-ar">انتقل إلى المحتوى الرئيسي</span>
+  <span class="lang-en">Skip to main content</span>
+</a>
+
 <svg style="position:absolute;width:0;height:0;overflow:hidden"><use href="assets/svg/icons.svg#i-logo"/></svg>
 <object type="image/svg+xml" data="assets/svg/icons.svg" style="display:none" aria-hidden="true"></object>
 
@@ -28,8 +33,8 @@
     </span>
   </a>
 
-  <nav class="nav-links">
-    <a href="index.html" class="is-active"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+  <nav class="nav-links" aria-label="التنقّل الرئيسي">
+    <a href="index.html" class="is-active" aria-current="page"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
     <a href="about.html"><span class="lang-ar">من نحن</span><span class="lang-en">About</span></a>
     <a href="services.html"><span class="lang-ar">خدماتنا</span><span class="lang-en">Services</span></a>
     <a href="gallery.html"><span class="lang-ar">معرض الأعمال</span><span class="lang-en">Gallery</span></a>
@@ -41,12 +46,12 @@
       <button data-lang="ar" type="button">AR</button>
       <button data-lang="en" type="button">EN</button>
     </div>
-    <button class="nav-burger" aria-label="فتح القائمة" type="button"><span></span><span></span><span></span></button>
+    <button class="nav-burger" aria-label="فتح القائمة / Open menu" aria-expanded="false" aria-controls="nav-links" type="button"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <!-- ============ الهيرو ============ -->
-<section class="hero">
+<section class="hero" id="main-content">
   <img class="hero-net" src="assets/svg/network.svg" alt="" aria-hidden="true">
   <div class="wrap hero-grid">
     <div>
@@ -273,7 +278,7 @@
         <p><span class="lang-ar">خبرة طويلة في النقل واللوجستيات صقلتها رحلات حقيقية مع عملاء من مختلف القطاعات — لسنا جددًا على هذا الطريق.</span><span class="lang-en">Decades of transport and logistics experience shaped by real journeys with clients across every sector — we are not new to this road.</span></p>
       </div>
       <div class="feature-card reveal" style="--i:1">
-        <div class="feature-icon"><svg><use href="assets/svg/icons.svg#i-clock"/></svg></div>
+        <div class="feature-icon"><svg><use href="assets/svg/icons.svg#i-phone"/></svg></div>
         <h3><span class="lang-ar">استجابة فورية، وعرض سعر خلال ساعات</span><span class="lang-en">Instant Response, Quotes Within Hours</span></h3>
         <p><span class="lang-ar">فريقنا جاهز لاستلام طلبك والرد عليه بسرعة — لا انتظار طويل ولا تعقيد، فقط حل عملي يبدأ من أول مكالمة.</span><span class="lang-en">Our team is ready to receive and respond to your request fast — no long waits, no complexity, just a practical solution starting from the first call.</span></p>
       </div>

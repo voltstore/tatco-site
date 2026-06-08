@@ -43,17 +43,26 @@
     window.addEventListener('scroll', onScroll, { passive:true });
 
     if(burger && links){
+      function closeNav(){
+        links.classList.remove('is-open');
+        burger.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
       burger.addEventListener('click', function(){
         var open = links.classList.toggle('is-open');
         burger.classList.toggle('is-open', open);
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
         document.body.style.overflow = open ? 'hidden' : '';
       });
       links.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          links.classList.remove('is-open');
-          burger.classList.remove('is-open');
-          document.body.style.overflow = '';
-        });
+        a.addEventListener('click', closeNav);
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape' && links.classList.contains('is-open')){
+          closeNav();
+          burger.focus();
+        }
       });
     }
   }
